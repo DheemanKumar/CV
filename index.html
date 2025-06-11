@@ -1,81 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dheeman Kumar - CV</title>
-    <!-- Add Bootstrap CDN link -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Link to your custom CSS file -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dheeman Kumar - CV</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .section {
+      margin-top: 40px;
+    }
+    .footer {
+      background-color: #343a40;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 60px;
+    }
+    .img-circle {
+      border-radius: 50%;
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Dheeman Kumar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#summary">Summary</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#education">Education</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Dheeman Kumar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="#summary">Summary</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <div class="container mt-5">
-        <header class="text-center">
-            <h1>Dheeman Kumar</h1>
-        </header>
-        
-        <section id="summary" class="section">
-            <div class="row">
-                <div class="col-md-9">
-                    <h2>Summary</h2>
-                    <p>Hey! I am Dheeman Kumar, a Software Engineering Undergraduate at Delhi Technological University. I am intersted in Game development and Machine Learning.</p>
-                </div>
-                <div class="col-md-3 text-center">
-                    <img src="images/IMG_3612.HEIC" alt="Your Image" class="img-circle img-fluid">
-                </div>
-            </div>
-        </section>
-        
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-        </section>
-        
-        <section id="education" class="section">
-            <h2>Education</h2>
-        </section>
-        
-        <section id="skills" class="section">
-            <h2>Skills</h2>
-        </section>
-        
-        <section id="contact" class="section">
-        </section>
+  <!-- Main Container -->
+  <div class="container mt-5">
+    <!-- Header -->
+    <header class="mb-4">
+  <!-- First Row: Name | Location | Badges -->
+  <div class="row align-items-center">
+    <!-- Name -->
+    <div class="col-md-8 text-md-left text-center">
+      <h1 class="display-4 mb-1">Dheeman Kumar</h1>
+      <small class="text-muted">📍 Delhi, India</small>
     </div>
 
-    <footer class="footer">
-        <p>&copy; 2023 Dheeman Kumar. All rights reserved.</p>
-    </footer>
+    <!-- Icon Badges -->
+    <div class="col-md-4 text-md-right text-center">
+      <a href="mailto:kumar.dheemanwork@gmail.com" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/000000/new-post.png" alt="Email" class="icon-badge" title="Email">
+      </a>
+      <a href="https://github.com/DheemanKumar" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub" class="icon-badge" title="GitHub">
+      </a>
+      <a href="https://www.linkedin.com/in/dheemankumar/" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="LinkedIn" class="icon-badge" title="LinkedIn">
+      </a>
+    </div>
+  </div>
 
-    <!-- Add Bootstrap JS and Popper.js CDN links (for Bootstrap components and JavaScript functionality) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Second Row: Lead -->
+  <div class="row mt-3">
+    <div class="col text-center">
+      <p class="lead mb-0">
+        Software Engineering Undergraduate | Game Development & Machine Learning Enthusiast
+      </p>
+    </div>
+  </div>
+</header>
+
+
+
+<!-- Projects and Image Block -->
+<section id="projects" class="section mb-5">
+  <div class="row">
+    <!-- Projects: 2/3 width -->
+    <div class="col-md-8">
+      <h2>Projects</h2>
+      <div class="project-list pr-2" style="max-height: 360px; overflow-y: auto; overflow-x: hidden;">
+
+        <div class="row">
+          <!-- Project 1 -->
+          <div class="col-md-6 mb-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">test</h5>
+                <p class="card-text">.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="col-md-6 mb-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">test</h5>
+                <p class="card-text">.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="col-md-6 mb-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">test</h5>
+                <p class="card-text">.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="col-md-6 mb-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">test</h5>
+                <p class="card-text">.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="col-md-6 mb-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">test</h5>
+                <p class="card-text">.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Add more projects here if needed -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Profile Image: 1/3 width -->
+    <!-- Profile Block: 1/3 width with background image and skills at the bottom -->
+<div class="col-md-4 profile-block text-white">
+  <!-- Overlay -->
+  <div class="overlay"></div>
+
+  <!-- Skills at bottom -->
+  <div class="p-3 mt-auto z-index-2 position-relative">
+    <h5 class="text-center mb-3">Skills</h5>
+    <ul class="list-inline text-center">
+      <li class="list-inline-item badge badge-primary p-2 m-1">Python</li>
+      <li class="list-inline-item badge badge-success p-2 m-1">C++</li>
+      <li class="list-inline-item badge badge-info p-2 m-1">Unity</li>
+      <li class="list-inline-item badge badge-warning p-2 m-1">Machine Learning</li>
+      <li class="list-inline-item badge badge-dark p-2 m-1">HTML/CSS/JS</li>
+    </ul>
+  </div>
+</div>
+
+  </div>
+</section>
+
+
+
+
+
+    <!-- Summary -->
+    <section id="summary" class="section">
+      <div class="row align-items-center">
+        <div class="col-md-12">
+          <h2>Summary</h2>
+          <p>
+            Hello! I'm Dheeman Kumar, a passionate Software Engineering undergraduate at Delhi Technological University.
+            I have a strong interest in game development and machine learning, and I love building innovative and interactive projects.
+          </p>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <p><strong>Delhi Technological University (DTU)</strong><br/>
+        B.Tech in Software Engineering<br/>
+        2021 – Present</p>
+    </section>
+
+    <!-- Skills -->
+    
+
+    <!-- Contact -->
+    
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Dheeman Kumar. All rights reserved.</p>
+  </footer>
+
+  <!-- JS Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
