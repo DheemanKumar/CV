@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+    background-color: #f9f9f9;
+    font-family: 'Inter', sans-serif;
+    color: #222;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.container {
+    background-color: #FFEDF3;
+    padding: 20px;
+    border: 1px solid #ADEED9;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Navbar */
+.navbar, .custom-navbar {
+    background-color: #FFEDF3 !important;
+    border-bottom: 1px solid #ADEED9;
+}
+
+.custom-navbar .navbar-brand {
+    color: #333 !important;
+    font-weight: bold;
+}
+
+.custom-navbar .nav-link {
+    color: #555 !important;
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #0077cc !important;
+}
+
+/* Section Title */
+.fantasy-heading, .section-title {
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Header */
+.fantasy-header {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    background-color: #56DFCF;
+    border-radius: 10px;
+}
+
+.fantasy-name {
+    color: #222;
+    font-weight: bold;
+}
+
+.location {
+    color: #666 !important;
+}
+
+/* Icon Row */
+.icon-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.icon-container {
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.icon-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icon-container img.icon-badge {
+    width: 32px;
+    height: 32px;
+    filter: none;
+    transition: transform 0.2s ease;
+}
+
+.icon-container img.icon-badge:hover {
+    transform: scale(1.1);
+}
+
+/* Project Cards */
+.fantasy-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #333;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fantasy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.fantasy-card .card-title {
+    font-size: 1.25rem;
+    color: #222;
+    font-weight: 600;
+}
+
+.fantasy-card .card-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+.fantasy-card .card-body {
+    padding: 1.5rem;
+}
+
+/* General Cards */
+.card {
+    background: #56DFCF;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.card-title {
+    color: #222;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #666;
+    font-style: normal;
+}
+
+/* Profile Block */
+.profile-block {
+    background-image: url('images/profile.png');
+    background-size: cover;
+    background-position: center top;
+    min-height: 360px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+}
+
+.profile-block .overlay {
+    background: rgba(255, 255, 255, 0.4);
+    z-index: 1;
+}
+
+.profile-block .position-relative {
+    z-index: 2;
+}
+
+.profile-block h5 {
+    color: #333;
+}
+
+/* Skill Badges */
+.skill-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: #333;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-badge:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.arcane {
+    background: #ddd;
+}
+
+.steel {
+    background: #ccc;
+}
+
+.elemental {
+    background: #bbe5f1;
+}
+
+.mystic {
+    background: #ffe0b2;
+}
+
+.runic {
+    background: #bbb;
+}
+
+/* Animation Cards */
+.animation-container {
+    max-width: 900px;
+    width: 100%;
+    min-height: 420px;
+    cursor: pointer;
+    position: relative;
+}
+
+.animation-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.animation-card {
+    position: absolute;
+    width: 100%;
+    min-height: 420px;
+    top: 0;
+    left: 0;
+    background: #ADEED9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    color: #222;
+    font-family: 'Inter', sans-serif;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.animation-card.show {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 2;
+}
+
+.animation-card:not(.show) {
+    z-index: 1;
+}
+
+.animation-card h2 {
+    text-align: center;
+    font-size: 1.75rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.animation-card .row {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.animation-card .col-md-6 {
+    flex: 1 1 45%;
+    max-width: 45%;
+}
+
+.animation-card .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.animation-card .card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Footer */
+.parchment-footer {
+    background: #f8c9ff;
+    border-top: 1px solid #ccc;
+    color: #555;
+    padding: 20px 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    text-align: center;
+}

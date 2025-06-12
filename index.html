@@ -8,39 +8,16 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link id="theme-style" rel="stylesheet" href="modern.css" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet"> -->
 
-    <!-- <style>
-        body {
-            background-color: #f8f9fa;
-        }
-
-        .section {
-            margin-top: 40px;
-        }
-
-        .footer {
-            background-color: #343a40;
-            color: #fff;
-            text-align: center;
-            padding: 15px 0;
-            margin-top: 60px;
-        }
-
-        .img-circle {
-            border-radius: 50%;
-            max-width: 100%;
-            height: auto;
-        }
-    </style> -->
 </head>
 
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
-        <a class="navbar-brand" href="#">Dheeman Kumar</a>
+        <a class="navbar-brand" href="#" onclick="toggleTheme()">Dheeman Kumar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -51,8 +28,6 @@
                 <li class="nav-item"><a class="nav-link" href="#summary">Summary</a></li>
                 <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                 <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -73,19 +48,25 @@
 
                 <!-- Icon Badges -->
                 <div class="col-md-4 text-md-right text-center fantasy-icons">
-                    <a href="mailto:test@gmail.com" target="_blank">
-                        <img src="https://img.icons8.com/ios-filled/50/ffae00/new-post.png" alt="Email"
-                            class="icon-badge" title="Email">
-                    </a>
-                    <a href="https://github.test" target="_blank">
-                        <img src="https://img.icons8.com/ios-filled/50/ffae00/github.png" alt="GitHub"
-                            class="icon-badge" title="GitHub">
-                    </a>
-                    <a href="https://www.linkedin.test" target="_blank">
-                        <img src="https://img.icons8.com/ios-filled/50/ffae00/linkedin.png" alt="LinkedIn"
-                            class="icon-badge" title="LinkedIn">
-                    </a>
-                </div>
+  <div class="icon-row">
+    <div class="icon-container">
+      <a href="https://www.linkedin.test" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="LinkedIn" class="icon-badge" title="LinkedIn">
+      </a>
+    </div>
+    <div class="icon-container">
+      <a href="https://www.github.test" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub" class="icon-badge" title="GitHub">
+      </a>
+    </div>
+    <div class="icon-container">
+      <a href="https://www.twitter.test" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/000000/twitter.png" alt="Twitter" class="icon-badge" title="Twitter">
+      </a>
+    </div>
+  </div>
+</div>
+
             </div>
 
             <!-- Second Row: Lead -->
@@ -156,51 +137,51 @@
 
 
         <!-- Summary -->
-<section id="summary" class="section themed-section">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="themed-card">
-                <h2 class="section-title">🧾 Summary</h2>
-                <p>
-                    Hello! I'm <strong>Dheeman Kumar</strong>, a passionate Software Engineering undergraduate at Delhi Technological
-                    University. I have a strong interest in <strong>Game Development</strong> and <strong>Machine Learning</strong>, and I love building
-                    innovative and interactive projects.
-                </p>
+        <section id="summary" class="section themed-section">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="themed-card">
+                        <h2 class="section-title">🧾 Summary</h2>
+                        <p>
+                            Hello! I'm <strong>Dheeman Kumar</strong>, a passionate Software Engineering undergraduate
+                            at Delhi Technological
+                            University. I have a strong interest in <strong>Game Development</strong> and
+                            <strong>Machine Learning</strong>, and I love building
+                            innovative and interactive projects.
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<!-- Education -->
-<section id="education" class="section themed-section">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="themed-card">
-                <h2 class="section-title">🎓 Education</h2>
-                <p>
-                    <strong>Delhi Technological University (DTU)</strong><br />
-                    B.Tech in Software Engineering<br />
-                    <span class="edu-years">2021 – Present</span>
-                </p>
+        <!-- Education -->
+        <section id="education" class="section themed-section">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="themed-card">
+                        <h2 class="section-title">🎓 Education</h2>
+                        <p>
+                            <strong>Delhi Technological University (DTU)</strong><br />
+                            B.Tech in Software Engineering<br />
+                            <span class="edu-years">2021 – Present</span>
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
 
 
 
         <section id="experience" class="section d-flex justify-content-center">
-            <div class="flip-container-large"
-                onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-                <div class="flip-card-inner">
+            <div class="animation-container" onclick="flipContent()">
+
+                <div class="animation-card-inner">
 
                     <!-- Front: Experience -->
-                    <div
-                        class="flip-card-front d-flex flex-column justify-content-center align-items-center text-center p-4">
-                        <h2>Experience</h2>
+                    <div class="animation-card animation-front show">
+                        <h2 id="animation-title" data-full="Experience">Experience</h2>
                         <div class="row w-100">
-                            <!-- Experience Card 1 -->
                             <div class="col-md-6 mb-3">
                                 <div class="card h-100 shadow-sm">
                                     <div class="card-body">
@@ -209,8 +190,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Experience Card 2 -->
                             <div class="col-md-6 mb-3">
                                 <div class="card h-100 shadow-sm">
                                     <div class="card-body">
@@ -220,15 +199,12 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                     <!-- Back: Certificates -->
-                    <div
-                        class="flip-card-back d-flex flex-column justify-content-center align-items-center text-center p-4">
-                        <h2>Certificates</h2>
+                    <div class="animation-card animation-back">
+                        <h2 id="animation-title-back" data-full="Certificates">Certificates</h2>
                         <div class="row w-100">
-                            <!-- Experience Card 1 -->
                             <div class="col-md-6 mb-3">
                                 <div class="card h-100 shadow-sm">
                                     <div class="card-body">
@@ -237,8 +213,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Experience Card 2 -->
                             <div class="col-md-6 mb-3">
                                 <div class="card h-100 shadow-sm">
                                     <div class="card-body">
@@ -249,9 +223,11 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
+
 
 
         <!-- Skills -->
@@ -263,11 +239,43 @@
 
     <!-- Footer -->
     <footer class="footer parchment-footer text-center">
-  <p>&copy; 2025 Dheeman Kumar. All rights reserved.</p>
-</footer>
+        <p>&copy; 2025 Dheeman Kumar. All rights reserved.</p>
+    </footer>
 
 
     <!-- JS Scripts -->
+    <script id="theme-script" src="tron.js"></script>
+
+    <script>
+  const themes = [
+
+    { css: "modern.css", js: "tron.js" },
+    { css: "tron.css", js: "tron.js" },
+    { css: "fantasy.css", js: "fantasy.js" }
+  ];
+
+  let currentTheme = 0;
+  let isExperienceFront = true;
+
+  function toggleTheme() {
+    currentTheme = (currentTheme + 1) % themes.length;
+
+    const cssLink = document.getElementById("theme-style");
+    const jsScript = document.getElementById("theme-script");
+
+    // Change CSS
+    cssLink.href = themes[currentTheme].css;
+
+    // Replace JS by creating a new script tag
+    const newScript = document.createElement("script");
+    newScript.src = themes[currentTheme].js;
+    newScript.id = "theme-script";
+
+    // Replace old script
+    jsScript.parentNode.replaceChild(newScript, jsScript);
+  }
+</script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

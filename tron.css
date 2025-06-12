@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap');
+
+body {
+    background-color: #0b0c10;
+    font-family: 'Orbitron', sans-serif;
+    color: #66fcf1;
+    margin: 0;
+}
+
+.container {
+    background-color: #1f2833;
+    padding: 20px;
+    border: 2px solid #45a29e;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #66fcf1;
+    margin-top: 20px;
+}
+
+.navbar, .custom-navbar {
+    background-color: #1f2833 !important;
+    border-bottom: 2px solid #45a29e;
+    box-shadow: 0 0 12px #66fcf1;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.custom-navbar .navbar-brand {
+    color: #66fcf1 !important;
+    font-weight: bold;
+    text-shadow: 0 0 8px #45a29e;
+}
+
+.custom-navbar .nav-link {
+    color: #c5c6c7 !important;
+    font-weight: bold;
+    margin-left: 1rem;
+    transition: 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #66fcf1 !important;
+    text-shadow: 0 0 6px #66fcf1;
+}
+
+/* here */
+
+.fantasy-header {
+    padding: 20px;
+    border-bottom: 2px solid #45a29e;
+    background-color: #0b0c10;
+    border-radius: 12px;
+    box-shadow: 0 0 16px #66fcf1;
+}
+
+.fantasy-name {
+    color: #66fcf1;
+    text-shadow: 0 0 8px #45a29e;
+}
+
+.location {
+    color: #c5c6c7 !important;
+}
+
+.fantasy-icons img.icon-badge {
+    width: 36px;
+    margin: 0 8px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(0 0 6px #45a29e);
+}
+
+.fantasy-icons img.icon-badge:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 10px #66fcf1);
+}
+
+.fantasy-lead {
+    font-style: italic;
+    color: #66fcf1;
+}
+
+.icon-row {
+  display: flex;
+  justify-content: center; /* center by default */
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.icon-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #0ff 20%, #000 60%, #0ff 90%);
+  box-shadow: 0 0 20px #0ff, 0 0 40px #0ff inset, 0 0 10px #00f inset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.icon-container:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #0ff, 0 0 60px #0ff inset, 0 0 15px #00f inset;
+}
+
+.icon-container img.icon-badge {
+  width: 40px;
+  height: 40px;
+  filter: brightness(0) invert(1);
+}
+
+
+
+/* Section Title */
+.fantasy-heading, .section-title {
+    color: #66fcf1;
+    text-shadow: 0 0 8px #45a29e;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #45a29e;
+}
+
+/* Project Cards */
+.fantasy-card {
+    background-color: #1f2833;
+    border: 2px solid #45a29e;
+    color: #c5c6c7;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #66fcf1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fantasy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #66fcf1;
+}
+
+.fantasy-card .card-title {
+    font-size: 1.25rem;
+    color: #66fcf1;
+}
+
+.fantasy-card .card-text {
+    font-size: 1rem;
+    color: #c5c6c7;
+    font-style: normal;
+}
+
+.fantasy-card .card-body {
+    padding: 1.5rem;
+    background: linear-gradient(180deg, #0b0c10, #1f2833);
+    border-radius: 10px;
+}
+
+/* Profile Block */
+.profile-block {
+    background-image: url('images/tron.png');
+    background-size: cover;
+    background-position: center top; /* Changed from just 'center' */
+    min-height: 360px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid #45a29e;
+    box-shadow: 0 0 14px #66fcf1;
+}
+
+
+.profile-block .overlay {
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.profile-block h5 {
+    color: #66fcf1;
+    text-shadow: 0 0 8px #45a29e;
+}
+
+/* Skill Badges - Tron Theme */
+.skill-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem;
+    color: #0b0c10;
+    background: #66fcf1;
+    border: 2px solid #45a29e;
+    box-shadow: 0 0 10px #66fcf1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-shadow: none;
+}
+
+.skill-badge:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #66fcf1;
+}
+
+/* Skill Themes (recolored to match neon style) */
+.arcane     { background: #0ff; box-shadow: 0 0 12px #0ff; }
+.steel      { background: #00f; box-shadow: 0 0 12px #00f; color: #fff; }
+.elemental  { background: #0af; box-shadow: 0 0 12px #0af; }
+.mystic     { background: #f0f; box-shadow: 0 0 12px #f0f; color: #fff; }
+.runic      { background: #1f1f1f; box-shadow: 0 0 12px #aaa; color: #fff;}
+
+
+
+
+/* k */
+.animation-container {
+  max-width: 900px;
+  width: 100%;
+  min-height: 420px;
+  cursor: pointer;
+  position: relative;
+}
+
+.animation-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.animation-card {
+  position: absolute;
+  width: 100%;
+  min-height: 420px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  border: 2px solid #00f0ff;
+  border-radius: 16px;
+  box-shadow: 0 0 20px #00f0ff;
+  color: #00f0ff;
+  font-family: 'Orbitron', sans-serif;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.animation-card.show {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.animation-card:not(.show) {
+  z-index: 1;
+}
+
+.animation-card h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.animation-card .row {
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.animation-card .col-md-6 {
+  display: flex;
+  flex: 1 1 45%;
+  max-width: 45%;
+}
+
+.animation-card .card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.animation-card .card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+
+
+/* Card (for general use) */
+.card {
+    background: #1f2833;
+    border: 2px solid #66fcf1;
+    border-radius: 10px;
+}
+
+.card-title {
+    color: #66fcf1;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #c5c6c7;
+}
+
+/* Footer */
+.parchment-footer {
+    background: #0b0c10;
+    border-top: 4px solid #45a29e;
+    font-family: 'Orbitron', sans-serif;
+    color: #66fcf1;
+    padding: 20px 10px;
+    box-shadow: 0 -4px 10px #66fcf1;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
