@@ -84,4 +84,19 @@
       }, 50);
     }, 300);
   }
+
+  // Make cards clickable if data-href is set
+  function enableCardLinks() {
+    document.querySelectorAll('.card[data-href]').forEach(card => {
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', function (e) {
+        const href = card.getAttribute('data-href');
+        if (href) {
+          window.open(href, '_blank');
+        }
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', enableCardLinks);
 })();
