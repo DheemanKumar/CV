@@ -297,6 +297,21 @@ enhancing organization and categorization.</p>
 
     <!-- JS Scripts -->
     <script id="theme-script" src="tron.js"></script>
+    <script>
+      // Always enable card links regardless of theme
+      function enableCardLinks() {
+        document.querySelectorAll('.card[data-href]').forEach(card => {
+          card.style.cursor = 'pointer';
+          card.addEventListener('click', function (e) {
+            const href = card.getAttribute('data-href');
+            if (href) {
+              window.open(href, '_blank');
+            }
+          });
+        });
+      }
+      document.addEventListener('DOMContentLoaded', enableCardLinks);
+    </script>
 
     <script>
   const themes = [
