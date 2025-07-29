@@ -94,3 +94,67 @@ function showCards(cards) {
   }
   show();
 }
+
+// Global variable to store the currently active flickering elements for the current burst
+let currentActiveFlickerElements = [];
+
+// Function to apply/remove glow based on random chance (for rapid flickering)
+// This function now operates ONLY on the elements passed to it.
+function applyFlickerGlow(elementsToFlicker) {
+  elementsToFlicker.forEach(el => {
+    if (Math.random() < 0.5) { // 50% chance to be glowing
+      el.classList.add('glow-effect');
+    } else {
+      el.classList.remove('glow-effect');
+    }
+  });
+}
+
+// Function to clear all glow effects (remains the same)
+function clearAllGlows() {
+  const allGlowElements = document.querySelectorAll('.container, .navbar, .fantasy-header, .fantasy-card, .profile-block, .skill-badge, .animation-card, .card, .parchment-footer, .icon-container');
+  allGlowElements.forEach(el => {
+    el.classList.remove('glow-effect');
+  });
+}
+
+let flickerInterval; // To store the rapid flicker interval ID
+let isFlickering = false;
+
+function startFlickeringBurst() {
+  if (isFlickering) return; // Prevent multiple bursts from starting
+
+  isFlickering = true;
+
+  // 1. Determine the subset of elements that will flicker for THIS burst
+  const allPossibleGlowElements = Array.from(document.querySelectorAll('.container, .navbar, .fantasy-header, .fantasy-card, .profile-block, .skill-badge, .animation-card, .card, .parchment-footer, .icon-container'));
+  currentActiveFlickerElements = [];
+  allPossibleGlowElements.forEach(el => {
+    if (Math.random() < 0.2) { // 50% chance for an element to be part of the active flickering set for this burst
+      currentActiveFlickerElements.push(el);
+    }
+  });
+
+  // Start rapid flickering for the selected subset
+  flickerInterval = setInterval(() => {
+    applyFlickerGlow(currentActiveFlickerElements);
+  }, 100); // Rapid flickering every 100ms
+
+  // Stop flickering after a random duration (e.g., 1 to 3 seconds)
+  const flickerDuration = Math.random() * 2000 + 1000; // 1000ms (1s) to 3000ms (3s)
+  setTimeout(() => {
+    clearInterval(flickerInterval); // Stop rapid flickering
+    clearAllGlows(); // Ensure all glows are off
+    isFlickering = false;
+    currentActiveFlickerElements = []; // Clear the active set for the next burst
+
+    // Wait for a random rest period (e.g., 3 to 7 seconds) before the next burst
+    const restDuration = Math.random() * 2000 + 1000; // 3000ms (3s) to 7000ms (7s)
+    setTimeout(startFlickeringBurst, restDuration);
+  }, flickerDuration);
+}
+
+// Start the first flickering burst when the script loads
+startFlickeringBurst();
+
+

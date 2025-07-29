@@ -324,3 +324,7 @@ body {
     font-size: 1rem;
     letter-spacing: 1px;
 }
+
+.glow-effect {
+    box-shadow: 0 0 15px #66fcf1, 0 0 25px #66fcf1, 0 0 35px #66fcf1;
+}
