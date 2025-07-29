@@ -22,6 +22,8 @@ function flipContent() {
       // Toggle view
       front.classList.toggle('show');
       back.classList.toggle('show');
+      // Ensure the full text is present before typing animation starts
+      nextTitle.textContent = nextTitle.dataset.full || '';
       // Step 3: Type new title
       typeText(nextTitle, () => {
         // Step 4: Show new cards
@@ -47,6 +49,7 @@ function deleteCards(cards, callback) {
 }
 
 function deleteText(el, callback) {
+  console.log('deleteText: Deleting text from element:', el.id, 'Current text:', el.textContent);
   let text = el.textContent;
   let i = text.length;
   function erase() {
@@ -54,6 +57,8 @@ function deleteText(el, callback) {
       el.textContent = text.slice(0, --i);
       setTimeout(erase, 30);
     } else {
+      console.log('deleteText: Text deletion complete for element:', el.id);
+      el.textContent = ''; // Ensure text is fully cleared
       callback();
     }
   }
@@ -62,12 +67,17 @@ function deleteText(el, callback) {
 
 function typeText(el, callback) {
   const fullText = el.dataset.full || '';
+  console.log('typeText: Typing text into element:', el.id, 'Full text to type:', fullText);
+  // Ensure the element is visible and correctly oriented before typing
+  el.style.opacity = 1;
+  el.style.transform = 'rotateX(0deg)';
   let i = 0;
   function type() {
     if (i <= fullText.length) {
       el.textContent = fullText.slice(0, i++);
       setTimeout(type, 40);
     } else {
+      console.log('typeText: Text typing complete for element:', el.id);
       callback();
     }
   }
