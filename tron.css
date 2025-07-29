@@ -269,6 +269,8 @@ body {
   justify-content: center;
   align-items: stretch;
   gap: 20px;
+  max-height: 300px; /* Adjust as needed */
+  overflow-y: auto;
 }
 
 .animation-card .col-md-6 {
@@ -321,4 +323,8 @@ body {
     box-shadow: 0 -4px 10px #66fcf1;
     font-size: 1rem;
     letter-spacing: 1px;
+}
+
+.glow-effect {
+    box-shadow: 0 0 15px #66fcf1, 0 0 25px #66fcf1, 0 0 35px #66fcf1;
 }

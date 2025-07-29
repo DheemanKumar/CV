@@ -8,7 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-    <link id="theme-style" rel="stylesheet" href="modern.css" />
+    <link id="theme-style" rel="stylesheet" href="snow.css" />
 
     <!-- <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet"> -->
 
@@ -296,7 +296,7 @@ enhancing organization and categorization.</p>
 
 
     <!-- JS Scripts -->
-    <script id="theme-script" src="tron.js"></script>
+    <script id="theme-script" src="snow.js"></script>
     <script>
       // Always enable card links regardless of theme
       function enableCardLinks() {
@@ -311,36 +311,60 @@ enhancing organization and categorization.</p>
         });
       }
       document.addEventListener('DOMContentLoaded', enableCardLinks);
-    </script>
 
-    <script>
-  const themes = [
+      const themes = [
+        { css: "snow.css", js: "snow.js" },
+        { css: "tron.css", js: "tron.js" },
+        { css: "fantasy.css", js: "fantasy.js" }
+      ];
 
-    { css: "modern.css", js: "tron.js" },
-    { css: "tron.css", js: "tron.js" },
-    { css: "fantasy.css", js: "fantasy.js" }
-  ];
+      let currentTheme = 0;
+      let isExperienceFront = true; // Global variable for flip state
 
-  let currentTheme = 0;
-  let isExperienceFront = true;
+      // Initial load: Check if snow.css is the current theme and start particles
+      document.addEventListener('DOMContentLoaded', () => {
+        if (document.getElementById("theme-style").getAttribute('href') === 'snow.css') {
+          // Delay to ensure snow.js is fully loaded and parsed
+          setTimeout(() => {
+            if (typeof window.startParticles === 'function') {
+              window.startParticles();
+            }
+          }, 100);
+        }
+      });
 
-  function toggleTheme() {
-    currentTheme = (currentTheme + 1) % themes.length;
+      function toggleTheme() {
+        // Stop particles if they are running
+        if (typeof window.stopParticles === 'function') {
+          window.stopParticles();
+        }
 
-    const cssLink = document.getElementById("theme-style");
-    const jsScript = document.getElementById("theme-script");
+        currentTheme = (currentTheme + 1) % themes.length;
 
-    // Change CSS
-    cssLink.href = themes[currentTheme].css;
+        const cssLink = document.getElementById("theme-style");
+        const jsScript = document.getElementById("theme-script");
 
-    // Replace JS by creating a new script tag
-    const newScript = document.createElement("script");
-    newScript.src = themes[currentTheme].js;
-    newScript.id = "theme-script";
+        // Change CSS
+        cssLink.href = themes[currentTheme].css;
 
-    // Replace old script
-    jsScript.parentNode.replaceChild(newScript, jsScript);
-  }
+        // Replace JS by creating a new script tag
+        const newScript = document.createElement("script");
+        newScript.src = themes[currentTheme].js;
+        newScript.id = "theme-script";
+
+        // Replace old script
+        jsScript.parentNode.replaceChild(newScript, jsScript);
+
+        // Start particles only if the new theme is snow.css
+        if (themes[currentTheme].css === 'snow.css') {
+          // Delay to ensure the new snow.js is fully loaded and parsed
+          setTimeout(() => {
+            if (typeof window.startParticles === 'function') {
+              window.startParticles();
+            }
+          }, 100);
+        }
+      }
 </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

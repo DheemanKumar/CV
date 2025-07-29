@@ -1,52 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
 body {
-    background-color: #f9f9f9;
-    font-family: 'Inter', sans-serif;
-    color: #222;
+    background-color: #e0f2f7; /* Light blue, snowy background */
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50; /* Dark blue text */
     margin: 0;
 }
 
 h2 {
     text-align: center;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 1rem;
 }
 
 .container {
-    background-color: #FFEDF3;
+    background-color: #ffffff; /* White container, like a snowdrift */
     padding: 20px;
-    border: 1px solid #ADEED9;
+    border: 1px solid #a7d9ed; /* Light blue border */
     border-radius: 10px;
+    box-shadow: 0 0 15px rgba(167, 217, 237, 0.5); /* Soft blue glow */
     margin-top: 20px;
 }
 
 /* Navbar */
 .navbar, .custom-navbar {
-    background-color: #FFEDF3 !important;
-    border-bottom: 1px solid #ADEED9;
+    background-color: #ffffff !important; /* White navbar */
+    border-bottom: 1px solid #a7d9ed;
+    box-shadow: 0 0 10px rgba(167, 217, 237, 0.3);
 }
 
 .custom-navbar .navbar-brand {
-    color: #333 !important;
+    color: #3498db !important; /* Bright blue brand */
     font-weight: bold;
 }
 
 .custom-navbar .nav-link {
-    color: #555 !important;
-    font-weight: 500;
+    color: #5fa8d3 !important; /* Medium blue links */
+    font-weight: 600;
     margin-left: 1rem;
     transition: color 0.3s ease;
 }
 
 .custom-navbar .nav-link:hover {
-    color: #0077cc !important;
+    color: #3498db !important; /* Brighter blue on hover */
 }
 
 /* Section Title */
 .fantasy-heading, .section-title {
-    color: #333;
-    border-bottom: 2px solid #ccc;
+    color: #3498db;
+    border-bottom: 2px solid #a7d9ed;
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
@@ -54,18 +56,19 @@ h2 {
 /* Header */
 .fantasy-header {
     padding: 20px;
-    border-bottom: 1px solid #ddd;
-    background-color: #56DFCF;
+    border-bottom: 1px solid #a7d9ed;
+    background-color: #f0f8ff; /* AliceBlue for header background */
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(167, 217, 237, 0.3);
 }
 
 .fantasy-name {
-    color: #222;
+    color: #2c3e50;
     font-weight: bold;
 }
 
 .location {
-    color: #666 !important;
+    color: #7f8c8d !important;
 }
 
 /* Icon Row */
@@ -80,9 +83,9 @@ h2 {
 .icon-container {
     width: 64px;
     height: 64px;
-    border-radius: 8px;
-    background-color: #f4f4f4;
-    border: 1px solid #ccc;
+    border-radius: 50%;
+    background-color: #f0f8ff; /* AliceBlue */
+    border: 1px solid #a7d9ed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,43 +95,45 @@ h2 {
 
 .icon-container:hover {
     transform: scale(1.05);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.8); /* Blue glow on container */
 }
 
 .icon-container img.icon-badge {
     width: 32px;
     height: 32px;
-    filter: none;
+    filter: brightness(0); /* Black tint for snow theme */
     transition: transform 0.2s ease;
 }
 
 .icon-container img.icon-badge:hover {
     transform: scale(1.1);
+    filter: brightness(0) drop-shadow(0 0 8px rgba(52, 152, 219, 0.8)); /* Blue glow */
 }
 
 /* Project Cards */
 .fantasy-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    color: #333;
+    background-color: #f8fcfd; /* Very light blue */
+    border: 1px solid #a7d9ed;
+    color: #2c3e50;
     border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .fantasy-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 16px rgba(167, 217, 237, 0.7);
 }
 
 .fantasy-card .card-title {
     font-size: 1.25rem;
-    color: #222;
-    font-weight: 600;
+    color: #3498db;
+    font-weight: 700;
 }
 
 .fantasy-card .card-text {
     font-size: 1rem;
-    color: #666;
+    color: #5fa8d3;
 }
 
 .fantasy-card .card-body {
@@ -137,24 +142,24 @@ h2 {
 
 /* General Cards */
 .card {
-    background: #56DFCF;
-    border: 1px solid #ddd;
+    background: #e0f2f7; /* Light blue */
+    border: 1px solid #a7d9ed;
     border-radius: 8px;
 }
 
 .card-title {
-    color: #222;
+    color: #2c3e50;
     font-weight: bold;
 }
 
 .card-text {
-    color: #666;
+    color: #5fa8d3;
     font-style: normal;
 }
 
 /* Profile Block */
 .profile-block {
-    background-image: url('images/profile.png');
+    background-image: url('images/profile.png'); /* Keep existing profile image */
     background-size: cover;
     background-position: center top;
     min-height: 360px;
@@ -164,7 +169,8 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid #ccc;
+    border: 1px solid #a7d9ed;
+    box-shadow: 0 0 12px rgba(167, 217, 237, 0.7);
 }
 
 .profile-block .overlay {
@@ -177,7 +183,7 @@ h2 {
 }
 
 .profile-block h5 {
-    color: #333;
+    color: #2c3e50;
 }
 
 /* Skill Badges */
@@ -185,37 +191,42 @@ h2 {
     display: inline-block;
     padding: 0.5rem 1rem;
     border-radius: 20px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 0.85rem;
-    color: #333;
-    background: #f0f0f0;
-    border: 1px solid #ccc;
+    color: #ffffff;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-badge:hover {
     transform: scale(1.05);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(167, 217, 237, 0.7);
 }
 
 .arcane {
-    background: #ddd;
+    background: linear-gradient(45deg, #3498db, #2980b9); /* Blue */
+    border-color: #a7d9ed;
 }
 
 .steel {
-    background: #ccc;
+    background: linear-gradient(45deg, #95a5a6, #7f8c8d); /* Gray */
+    border-color: #d0d8da;
 }
 
 .elemental {
-    background: #bbe5f1;
+    background: linear-gradient(45deg, #1abc9c, #16a085); /* Teal */
+    border-color: #a7e7d9;
 }
 
 .mystic {
-    background: #ffe0b2;
+    background: linear-gradient(45deg, #9b59b6, #8e44ad); /* Purple */
+    border-color: #d7bde2;
 }
 
 .runic {
-    background: #bbb;
+    background: linear-gradient(45deg, #34495e, #2c3e50); /* Dark Blue */
+    border-color: #aeb6bf;
 }
 
 /* Animation Cards */
@@ -239,11 +250,11 @@ h2 {
     min-height: 420px;
     top: 0;
     left: 0;
-    background: #ADEED9;
-    border: 1px solid #ccc;
+    background: #f0f8ff; /* AliceBlue */
+    border: 1px solid #a7d9ed;
     border-radius: 10px;
-    color: #222;
-    font-family: 'Inter', sans-serif;
+    color: #2c3e50;
+    font-family: 'Montserrat', sans-serif;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease-in-out;
@@ -277,9 +288,9 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    max-height: 300px;         /* Set scrollable area height */
+    max-height: 300px;
     overflow-y: auto;
-    padding-right: 10px;       /* Leave space for scrollbar */
+    padding-right: 10px;
 }
 
 /* Optional: custom scrollbar styling */
@@ -287,14 +298,12 @@ h2 {
     width: 6px;
 }
 .animation-card .row::-webkit-scrollbar-thumb {
-    background-color: #58bfa2;
+    background-color: #a7d9ed;
     border-radius: 10px;
 }
 .animation-card .row::-webkit-scrollbar-track {
     background: transparent;
 }
-
-
 
 .animation-card .col-md-6 {
     flex: 1 1 45%;
@@ -317,11 +326,12 @@ h2 {
 
 /* Footer */
 .parchment-footer {
-    background: #f8c9ff;
-    border-top: 1px solid #ccc;
-    color: #555;
+    background: #f0f8ff; /* AliceBlue */
+    border-top: 1px solid #a7d9ed;
+    color: #5fa8d3;
     padding: 20px 10px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 0.95rem;
     text-align: center;
+    box-shadow: 0 -2px 10px rgba(167, 217, 237, 0.3);
 }
