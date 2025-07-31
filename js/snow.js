@@ -27,7 +27,8 @@
     window.addEventListener('resize', resizeCanvas);
 
     snowflakeImage = new Image();
-    snowflakeImage.src = '../images/Snowflakes.png'; // Path to your snowflake image
+    console.log("Attempting to load snowflake image from: images/Snowflakes.png");                                        
+    snowflakeImage.src = 'images/Snowflakes.png'; // Corrected path   // Path to your snowflake image
     snowflakeImage.onload = () => {
       console.log("Successfully loaded snowflake image.");
       particles = [];
