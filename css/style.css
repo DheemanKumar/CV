@@ -139,7 +139,7 @@ body {
 
 /* Profile Block (already included) */
 .profile-block {
-    background-image: url('images/profile.png');
+    background-image: url('../images/profile.png');
     background-size: cover;
     background-position: center;
     min-height: 360px;

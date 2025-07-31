@@ -105,7 +105,7 @@ h2 {
     position: absolute;
     width: 80px;
     height: 80px;
-    background-image: url('images/dragon.png'); /* 🔁 Replace with your dragon image path */
+    background-image: url('../images/dragon.png'); /* 🔁 Replace with your dragon image path */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -189,7 +189,7 @@ h2 {
 
 .profile-block/* Profile Block */
  {
-    background-image: url('images/dnd.png');
+    background-image: url('../images/dnd.png');
     background-size: cover;
     background-position: top;
     min-height: 360px;
