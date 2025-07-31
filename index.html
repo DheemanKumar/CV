@@ -8,7 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-    <link id="theme-style" rel="stylesheet" href="snow.css" />
+    <link id="theme-style" rel="stylesheet" href="css/snow.css" />
 
     <!-- <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet"> -->
 
@@ -296,7 +296,7 @@ enhancing organization and categorization.</p>
 
 
     <!-- JS Scripts -->
-    <script id="theme-script" src="snow.js"></script>
+    <script id="theme-script" src="js/snow.js"></script>
     <script>
       // Always enable card links regardless of theme
       function enableCardLinks() {
@@ -313,9 +313,9 @@ enhancing organization and categorization.</p>
       document.addEventListener('DOMContentLoaded', enableCardLinks);
 
       const themes = [
-        { css: "snow.css", js: "snow.js" },
-        { css: "tron.css", js: "tron.js" },
-        { css: "fantasy.css", js: "fantasy.js" }
+        { css: "css/snow.css", js: "js/snow.js" },
+        { css: "css/tron.css", js: "js/tron.js" },
+        { css: "css/fantasy.css", js: "js/fantasy.js" }
       ];
 
       let currentTheme = 0;
@@ -323,7 +323,7 @@ enhancing organization and categorization.</p>
 
       // Initial load: Check if snow.css is the current theme and start particles
       document.addEventListener('DOMContentLoaded', () => {
-        if (document.getElementById("theme-style").getAttribute('href') === 'snow.css') {
+        if (document.getElementById("theme-style").getAttribute('href') === 'css/snow.css') {
           // Delay to ensure snow.js is fully loaded and parsed
           setTimeout(() => {
             if (typeof window.startParticles === 'function') {
@@ -356,7 +356,7 @@ enhancing organization and categorization.</p>
         jsScript.parentNode.replaceChild(newScript, jsScript);
 
         // Start particles only if the new theme is snow.css
-        if (themes[currentTheme].css === 'snow.css') {
+        if (themes[currentTheme].css === 'css/snow.css') {
           // Delay to ensure the new snow.js is fully loaded and parsed
           setTimeout(() => {
             if (typeof window.startParticles === 'function') {

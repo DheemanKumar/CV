@@ -159,7 +159,7 @@ h2 {
 
 /* Profile Block */
 .profile-block {
-    background-image: url('images/profile.png'); /* Keep existing profile image */
+    background-image: url('../images/profile.png'); /* Keep existing profile image */
     background-size: cover;
     background-position: center top;
     min-height: 360px;

@@ -153,7 +153,7 @@ body {
 
 /* Profile Block */
 .profile-block {
-    background-image: url('images/tron.png');
+    background-image: url('../images/tron.png');
     background-size: cover;
     background-position: center top; /* Changed from just 'center' */
     min-height: 360px;
